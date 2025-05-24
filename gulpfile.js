@@ -12,6 +12,7 @@ const diff = require('gulp-diff');
 const tsVersions = {
 //	dev: './typescript/dev',
 //	release36: './typescript/3.6',
+//	release40: './typescript/4.0',
 	release58: './typescript/5.8'
 };
 
@@ -86,9 +87,10 @@ const typecheck = gulp.parallel(typecheckDev);
 
 // We run every test on multiple typescript versions:
 const libs = [
+//	['4.0', require(tsVersions.release40)],
 	['5.8', require(tsVersions.release58)]
-	['3.6', require(tsVersions.release36)],
-	['dev', require(tsVersions.dev)]
+	// ['3.6', require(tsVersions.release36)],
+	// ['dev', require(tsVersions.dev)]
 ];
 
 /**

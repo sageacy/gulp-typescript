@@ -1,0 +1,3 @@
+[submodule "typescript/5.8"]
+	path = typescript/5.8
+	url = https://github.com/microsoft/TypeScript.git
