@@ -10,8 +10,9 @@ const plumber = require('gulp-plumber');
 const diff = require('gulp-diff');
 
 const tsVersions = {
-	dev: './typescript/dev',
-	release36: './typescript/3.6'
+//	dev: './typescript/dev',
+//	release36: './typescript/3.6',
+	release58: './typescript/5.8'
 };
 
 function findTSDefinition(location) {
@@ -85,6 +86,7 @@ const typecheck = gulp.parallel(typecheckDev);
 
 // We run every test on multiple typescript versions:
 const libs = [
+	['5.8', require(tsVersions.release58)]
 	['3.6', require(tsVersions.release36)],
 	['dev', require(tsVersions.dev)]
 ];
